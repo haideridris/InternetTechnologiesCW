@@ -1,0 +1,578 @@
+/**Styling and positioning for every page*/
+
+* {box-sizing: border-box;}
+
+html, body {
+  height: 100%; /** must be set to 100% this allows us to set a percentage height on the wrapper div*/
+  margin: 0; /*no space around the parameter of the page*/
+  padding: 0; /*no space around the parameter of the page*/
+}
+
+body {
+	background-color: #f4f4f4; /** very light grey background colour */
+	color: #555; /** darker shade of grey for text */
+	font-family: "Trebuchet MS", Helvetica, sans-serif; /**The font that will be used for most text in pages - unless other is specified - 1st font used */
+	font-size: 18px; /** font size for most text on the page - unless other is specified **/
+	line-height: 1.5em; 
+}
+
+/** used this to assure the footer stays at the bottom of the page*/
+#wrapper {
+  min-height:100%;
+  position: relative;
+}
+
+/** used this to assure the footer stays at the bottom of the page*/
+#mainbody{
+  padding: 0px;
+  padding-bottom: 100px;   /* Height of the footer*/
+}
+
+/**positions elements within this div within an area that spans 80% the width of the page*/
+.container{
+	width: 80%;  
+	margin: auto;
+	overflow: hidden; /**no scrollpane when the element content is too big to fit this div*/
+}
+
+/**styling for the header*/
+#main-header {
+	background-color: #784811;
+  padding: 10px;
+}
+
+/*Styling for the navbar with the login form within it on the right*/
+
+/*Styling for navbar */
+.nav {
+  overflow: hidden;
+  background-color: ##f4f4f4;  
+}
+
+/*styles navbar links */
+.nav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/*styles navbar links on mouse-over */
+.nav a:hover {
+  background-color: #ddd; /*goes gray on hover */
+  color: black;
+}
+
+/*styles navbar active link */
+.nav a:active {
+  background-color: #2196F3; /* goes blue */
+  color: white; /* text goes white */
+}
+
+/*positions the login form */
+.nav .login-form {
+  float: right;
+}
+
+/*styles the input fields*/
+.nav input[type=text] {
+  padding: 6px;
+  margin-top: 13px;
+  font-size: 17px;
+  border-radius: 5px;
+  border: none;
+  width: 160px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+.nav input[type=password] {
+  padding: 6px;
+  margin-top: 13px;
+  font-size: 17px;
+  border: none;
+  border-radius: 5px;
+  width: 160px; /* adjust as needed (as long as it doesn't break the topnav) */
+}
+
+/*styles the button in the login form*/
+.nav .login-form button {
+  float: right;
+  padding: 6px;
+  margin-top: 13px;
+  margin-right: 16px;
+  margin-left: 6px;
+  background: #ddd;
+  font-size: 17px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; /**changes the cursor when pointing over a button*/
+}
+
+/*styles the button in the login form on mouse over*/
+.nav .login-form button:hover {
+  background: #ccc; /*goes grey*/
+}
+
+/*styles the showcase*/
+#showcase{
+	background-image:url('../images/showcase.jpg'); /* background image of showcase is coffee beans */
+	background-position: center center;
+  min-height: 100px; /** makes page responsive - height of showcase will grow*/
+  margin-bottom: 30px   
+}
+
+/*styles the slogan found in the showcase*/
+#showcase h1{
+	color: #fff; /* white text */
+	font-size: 50px; /** 1st font size */
+	line-height: 1.6em;
+	padding-top: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif; /*font used for the showcase to look fancy/classy - 2nd font used */
+}
+
+/*positions the main content to the right*/
+#main {
+	float: right;
+	width: 70%;
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+
+/*styles headers in main section*/
+#main h1, h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/*styles h4 headers in main section*/
+#main h4 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*styles the paragraphs in main section*/
+#main p {
+  margin-top: 5px;
+}
+
+/*styles unvisited link in the main section*/
+#main a:link {
+  color: #555; /*gray*/
+}
+
+/*styles visited link in the main section*/
+#main a:visited {
+  color: #555; /*gray*/)
+}
+
+/*styles mouse over link in the main section*/
+#main a:hover {
+  color: #2196F3; /*blue*/
+}
+
+/*styles selected link in the main section*/
+#main a:active {
+  color: #555; /*gray*/
+}
+
+/** styling for all unordered lists */
+ul {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  list-style-type: square; /*square bullet pointss*/
+}
+
+/*positions the sidebar to the left*/
+#sidebar {
+	float: left;
+	width: 30%; 
+	background-color: #333; /** a shade of black */
+	color: #fff; /** white text within the sidebar */
+	padding: 10px;
+	box-sizing: border-box; 
+  border-radius: 5px; /*rounded edges*/
+}
+
+/**Styling the content of the sidebar*/
+#sidebar p {
+  text-align: center; 
+}
+
+/*positions the footer div - note this footer permanently stays at the bottom of the page regardless of the amount of content above it */
+#main-footer {
+	background: #333; /* a shade of black */
+	color: #fff; /* white text */
+	text-align: center;
+	padding: 20px;
+	position: absolute; 
+  bottom: 0; /**The div is absolutely positioned bottom:0; this moves it to the bottom of the wrapper div*/
+  width: 100%;
+  height: 100px;
+}
+
+/**Styling and positioning for the index.php page specifically*/
+
+/** removes whitespace initially seen above the video*/
+#video-container video{
+  display: block; 
+  width: 75%; 
+  height: 100%;
+  margin-bottom: 15px;
+}
+
+/**Styling and positioining for the aboutus.php page specifically*/
+
+/*styles the slideshow found on aboutus.php */
+#slideshow {
+  border-radius: 5%; /*rounded edges*/
+}
+
+/*Positions the images found in the committed to FairTrade section on about us.php */
+#leftimage {
+  float: left;
+  width: 50%;
+  padding: 15px 30px;
+  box-sizing: border-box;
+}
+
+#rightimage {
+  float: right;
+  width: 50%;
+  padding: 15px 30px;
+  box-sizing: border-box
+}
+
+/*Styles the left image found in the committed to FairTrade section in aboutus.php*/
+#leftimage img {
+  width: 100%;
+  height: 300px;
+  border-radius: 30%;
+}
+
+/*Styles the right image found in the committed to FairTrade section in aboutus.php*/
+#rightimage img {
+  width: 100%;
+  height: 300px;
+  border-radius: 30%;
+}
+
+/**Styling and positioning for the signup.php page specifically */
+
+/*Styles text that say Sign Up above sign up form*/
+.signupformtitle {
+  text-align: center;
+  font-size: 26px;
+  font-family: arial; /*3rd font used */
+  color: #111;
+}
+
+/*styles the sign up form in signup.php*/
+.form-signup {
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 30%;
+}
+
+.form-signup input {
+  width: 100%; /**full width of the form's block */
+  height: 30px; /**the height of each input **/
+  padding: 0 15px;  
+  margin-bottom: 10px; 
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  float: left;
+  font-family: arial;
+}
+
+.form-signup button {
+  display: block;
+  height: 40px;
+  padding: 0 10px;
+  margin: 10px auto 150px;
+  border: none;
+  border-radius: 4px;
+  background-color: #333;
+  font-family: arial;
+  font-size: 13px;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/**style messages displayed by sign up for, upon success or an error when signing up*/
+.errorsigningup {
+  padding-top: 14px;
+  font-family: arial;
+  font-size: 25px;
+  color: red;
+  text-align: center;
+}
+
+.successsigningup {
+  padding-top: 14px;
+  font-family: arial;
+  font-size: 25px;
+  color: green;
+  text-align: center;
+}
+
+/*style message that notifies website viewer they need to sign up to be able to view products*/
+#signuparea p {
+  text-align: center;
+}
+
+/**styling and positioning for products.php page specifically*/
+
+/*Styling for products table which is echo'd by php code*/
+.productsview table { 
+  width: 100%;
+  color: #784811;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  text-align: left;
+}
+
+.productsview th {
+  background-color: #784811;
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-size: 25px;
+  height: 50px;
+}
+
+.productsview td{
+  border: 1px solid #784811;
+  vertical-align: top;
+  text-align: left;
+  font-size: 20px;
+}
+
+/*styling for search input field which is echo'd in php code*/
+.productsview input {
+  width: 25%; /**full width of it's container */
+  height: 30px; /**the height of each input **/
+  padding: 0 10px;  
+  margin-bottom: 10px; 
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  font-family: arial;
+}
+
+/*styling for buttons which are echo'd in php code*/
+.productsview button {
+  display: inline;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0px auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #CCC;
+  font-family: arial;
+  font-size: 13px;
+  color: black;
+  text-align: center;
+}
+
+/*styling for images presented in the products table*/
+.productsview img{
+  display: block; /*removes whitespace below image in table cell*/
+  width: 150px;
+  height: 150px;
+}
+
+/**Styling and positioning for contactus.php page specifically */
+
+/**Styling for the address and opening times unordered list - removes bullet points */
+#address ul  {
+  list-style: none;
+}
+
+/**Styling for the opening times unordered list - removes bullet points */
+#openingtimes ul {
+  list-style: none;
+}
+
+/**positions the address unordered list to the left*/
+#address {
+  float: left;
+  width: 50%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/**positions the opening times to the right*/
+#openingtimes{
+  float: right;
+  width: 50%;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/**clears the two divs for address and opening times so the next element is positioned properly*/
+#clear {
+  clear: both;
+}
+
+/**Styles contact us unordered list */
+#contactus {
+  list-style: none;
+}
+
+/**styling for feedback form on contactus.php page*/
+
+/**styles the provide feedback form*/
+#feedbackform {
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0px auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #CCC;
+  font-family: arial;
+  font-size: 13px;
+  color: black;
+  text-align: center;
+}
+
+/**styles the feedback form*/
+
+/*set as none so that the fadetogglefeedbackform.js script for the fadeToggle animation works*/
+.feedback-form {
+  display: none;
+}
+
+.feedback-form input {
+  width: 100%; /**full width of it's container */
+  height: 30px; /**the height of each input **/
+  padding: 0 10px;  
+  margin-bottom: 10px; 
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  font-family: arial;
+}
+
+.feedback-form textarea {
+  width: 100%; /**full width of it's container */
+  height: 150px;
+  padding: 0 10px;  
+  margin-bottom: 10px;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  font-family: arial;
+}
+
+.feedback-form button {
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0px auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #CCC;
+  font-family: arial;
+  font-size: 13px;
+  color: black;
+  text-align: center;
+}
+/**Styling and positioning for the admin.php page specfically */
+
+/*position all forms on admin page side by side in a 1 by 3 format*/
+.formblock{
+  float: left;
+  width: 33.3%; 
+  margin-bottom: 20px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+/*styling for all the forms the admin uses on the admin page*/
+.admintable table { 
+  width: 100%;
+  color: #333;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+.admintable th {
+  background-color: #333;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+  font-size: 20px;
+  height: 50px;
+}
+
+.admintable td {
+  border: 1px solid #333;
+  vertical-align: top;
+  text-align: left;
+  font-size: 20px;
+} 
+
+.form-admin label {
+  display: block;
+}
+
+.form-admin input {
+  width: 100%; /**full width of it's container */
+  height: 30px; /**the height of each input **/
+  padding: 0 10px;  
+  margin-bottom: 10px; 
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  font-family: arial;
+}
+
+.form-admin select {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0px;
+  margin: 10px auto;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+  background-color: #F6F6F6;
+  color: gray;
+  font-family: arial;
+}
+
+.form-admin button {
+  display: block;
+  height: 30px;
+  padding: 0 10px;
+  margin: 0px auto;
+  border: none;
+  border-radius: 4px;
+  background-color: #CCC;
+  font-family: arial;
+  font-size: 13px;
+  color: black;
+  text-align: center;
+}
+
+/**style messages displayed by admin forms upon success or an error when performing either an add, change or delete */
+.erroradminforms {
+  padding-top: 0px;
+  font-family: Arial Black, Gadget, sans-serif; /*4th font used */
+  font-size: 20px;
+  color: red;
+  text-align: center;
+}
+
+.successadminforms {
+  padding-top: 0px;
+  font-family: Arial Black, Gadget, sans-serif;
+  font-size: 20px;
+  color: green;
+  text-align: center;
+}
